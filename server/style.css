@@ -7,6 +7,7 @@
   font-family: 'Sora', sans-serif;
   color: black;
   border: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -80,6 +81,41 @@ button {
   margin-top: 230px;
 }
 
+#plans {
+  display: flex;
+}
+
+.introduction-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0px 40px;
+  border-radius: 75px;
+  font-size: 32px;
+  width: 350px;
+  height: 650px;
+  padding: 90px 0px;
+}
+
+.item-description {
+  font-size: 24px;
+  padding: 0px 45px;
+  line-height: 2;
+}
+
+.exercise-item {
+  background-color: #F28482;
+}
+
+.diet-item {
+  background-color: #F6BD60;
+}
+
+.value-item {
+  background-color: #B7E4C7;
+}
+
 footer {
   /* see if footer is better fixed or not */
   /* position: fixed;
@@ -88,4 +124,15 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.line-break {
+  margin: 40px auto;
+  border: 1px solid #747474;
+  width: 900px;
+}
+
+.line-break-intro {
+  width: 230px;
+  margin: 30px 0px;
 }
