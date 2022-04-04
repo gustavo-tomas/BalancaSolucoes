@@ -1,8 +1,33 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
+import { Box, ChakraProvider } from '@chakra-ui/react';
+import { theme } from '../styles/theme'
+
+import Header from '../components/Header';
+import Head from 'next/head';
+import Footer from '../components/Footer';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return(
+    <>
+      <Head>
+        {/* <link rel="shortcut icon" href="/" /> */}
+      </Head>
+      <ChakraProvider theme={theme}>
+        <nav
+          style={{
+            position: 'sticky',
+            top: '0',
+            zIndex: '1'
+          }}
+        >
+          <Header />
+        </nav>
+        <Component {...pageProps} />
+        <Footer />
+      </ChakraProvider>
+    </>
+  )
 }
 
 export default MyApp
