@@ -24,6 +24,7 @@ import {
         >
           <Box
             width={{ base: '100%', md: '100%', lg: '100%' }}
+            className="contact"
           >
             <Text
               fontSize={{ base: '3xl', md: '2.5rem', lg:'5rem' }}

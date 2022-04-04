@@ -24,13 +24,10 @@ return(
         maxWidth={1300}
     >
         <Box
-        width={{ base: '100%', md: '100%', lg: '100%' }}
+            width={{ base: '100%', md: '100%', lg: '100%' }}
+            className="diets"
         >
-        {/* <HStack>
-            <Badge borderRadius='full' px='2' colorScheme='teal'>
-
-            </Badge>
-        </HStack> */}
+        
         <Stack
             direction={['row', 'row', 'row', 'row']}
             justify={['center', 'center', 'center', 'center']}

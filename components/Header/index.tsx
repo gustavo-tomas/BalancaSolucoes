@@ -71,7 +71,7 @@ export default function Header(){
             display={{ base: 'none', md: 'flex' }}
           >
             <Link
-              to="about"
+              to="beginning"
               smooth={true}
               onClick={onClose}
               duration={500}
@@ -88,7 +88,7 @@ export default function Header(){
               </Button>
             </Link>
             <Link
-              to="about"
+              to="diets"
               smooth={true}
               onClick={onClose}
               duration={500}
@@ -105,7 +105,7 @@ export default function Header(){
               </Button>
             </Link>
             <Link
-              to="about"
+              to="contact"
               smooth={true}
               onClick={onClose}
               duration={500}
