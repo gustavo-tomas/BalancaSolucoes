@@ -39,14 +39,16 @@ return(
             // maxWidth={200}
             height={200}
             width={80}
-            align='center'
+            
             >
             <Text
                 mt={"1rem"}
+                align='center'
             >Exercícios</Text>
             <Divider />
             <Text
                 mt={"1rem"}
+                align='center'
             >
             Exercícios físicos 
             para todas as 
@@ -61,14 +63,16 @@ return(
             // maxWidth={200}
             height={200}
             width={80}
-            align='center'
+            
             >
             <Text
                 mt={"1rem"}
+                align='center'
             >Exercícios</Text>
             <Divider />
             <Text
                 mt={"1rem"}
+                align='center'
             >Receitas saborosas e 
             pouco calóricas</Text>
             </Box>
@@ -79,15 +83,20 @@ return(
             // maxWidth={200}
             height={200}
             width={80}
-            align='center'
+            
             >
             <Text
                 mt={"1rem"}
-            >Exercícios</Text>
+                align='center'
+            >
+                Exercícios
+            </Text>
             <Divider />
             <Text
                 mt={"1rem"}
-            >Acreditamos que 
+                align='center'
+            >
+                Acreditamos que 
             um estilo de vida 
             saudável deve ser 
             acessível a todas 

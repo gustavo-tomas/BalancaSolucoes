@@ -42,14 +42,16 @@ import {
                 // maxWidth={200}
                 height={200}
                 width={80}
-                align='center'
+                
               >
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >Exercícios</Text>
                 <Divider />
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >
                 Exercícios físicos 
                 para todas as 
@@ -64,14 +66,16 @@ import {
                 // maxWidth={200}
                 height={200}
                 width={80}
-                align='center'
+                
               >
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >Exercícios</Text>
                 <Divider />
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >Receitas saborosas e 
                 pouco calóricas</Text>
               </Box>
@@ -82,14 +86,16 @@ import {
                 // maxWidth={200}
                 height={200}
                 width={80}
-                align='center'
+                
               >
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >Exercícios</Text>
                 <Divider />
                 <Text
                   mt={"1rem"}
+                  align='center'
                 >Acreditamos que 
                 um estilo de vida 
                 saudável deve ser 
