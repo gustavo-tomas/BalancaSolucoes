@@ -22,7 +22,7 @@ import {Link} from 'react-scroll';
 export default function Header(){
   const { isOpen, onToggle, onClose } = useDisclosure();
   return(
-    <Box
+    <Stack
       opacity={1}
       bg="white"
       py={{ base: 2 }}
@@ -233,6 +233,6 @@ export default function Header(){
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </Box>
+    </Stack>
   );
 }
