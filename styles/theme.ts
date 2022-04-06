@@ -2,32 +2,31 @@ import { extendTheme } from '@chakra-ui/react';
 
 export const theme = extendTheme({
   colors:{
-    gray: {
-      "bs": "#2E3440",
-      "900": "#181B23",
-      "800": "#1F2829",
-      "700": "#353646",
-      "600": "#4b4d63",
-      "500": "#616480",
-      "400": "#797d9a",
-      "300": "#9699b0",
-      "200": "#b3b5c6",
-      "100": "#d1d2dc",
-      "50": "#eeeef2"
+    blue:
+    {
+      "700": "#84A59D",
+      "600": "#B7E4C7",
     },
-    beige:{
-      "bs": "#f5f5dc",
+    orange:
+    {
+      "500": "#F6BD60",
     },
-    yellow:{
-      "bs": "#C2963D"
+    red:
+    {
+      "500": "#F28482",
     },
-    blue: {
-      "500": "#61dafb"
-    }
+    beige:
+    {
+      "bg": "#f5f5dc",
+    },
+    grey:
+    {
+      "tb": "#747474",
+    },
   },
   fonts: {
     heading: 'Maven+Pro',
-    body: 'Maven+Pro',
+    body: 'Sora',
   },
   styles: {
     global: {

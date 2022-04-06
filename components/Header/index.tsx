@@ -3,7 +3,6 @@ import {
   Flex,
   IconButton,
   useDisclosure,
-  Image,
   Text,
   Stack,
   Button,
@@ -11,7 +10,8 @@ import {
   DrawerContent,
   DrawerBody,
   DrawerOverlay,
-  DrawerCloseButton
+  DrawerCloseButton,
+  Center
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -22,17 +22,18 @@ import {Link} from 'react-scroll';
 export default function Header(){
   const { isOpen, onToggle, onClose } = useDisclosure();
   return(
+    
     <Stack
       opacity={1}
-      bg="white"
+      bg={"blue.700"}
       py={{ base: 2 }}
       px={{ base: 4 }}
       borderStyle={'solid'}
       align={"center"}
+      height={'130px'}
     >
       <Flex
         maxWidth={1300}
-        align={'center'}
       >
         <Flex
           flex={{base: 1, md: 'auto'}}
@@ -65,7 +66,10 @@ export default function Header(){
             <Text
               fontWeight={'bold'}
               color="black"
-            >BALANÇA SOLUÇÕES</Text>
+              
+            >
+              BALANÇA SOLUÇÕES
+            </Text>
           </Box>
           <Box
             display={{ base: 'none', md: 'flex' }}
