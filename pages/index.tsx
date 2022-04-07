@@ -42,12 +42,11 @@ export default function Home() {
       >
         <Diets />
       </Box>
-      <Box
+      {/* <Box
         py={{ base: "2vh", md: "2vh" }}
       >
         <Exercises />
-      </Box>
-      
+      </Box> */}
     </>
   )
 }
