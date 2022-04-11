@@ -17,7 +17,7 @@ import {
 
 
 
-export default function CarouselExcercises() {
+export default function CarouselExercises() {
   const [sliderRef, setSliderRef] = useState<any>(null)
   const [isLarger800] = useMediaQuery('min-width: 800px')
   
@@ -72,16 +72,16 @@ export default function CarouselExcercises() {
                 padding={'15px'}
                 align={'center'}
             >
-                {/* <NextLink
-                    href={'/Diets'}
-                > */}
+                <NextLink
+                    href={"/sections/Exercises"}
+                >
                     <Image 
                         src={card.imageSrc} 
                         className='card-image' 
                         boxSize={'100%'}
                         borderRadius={'100px'}
                     />
-                {/* </NextLink> */}
+                </NextLink>
                 {/* <Box className='text-info'>
                 <Box 
                     className='card-header'

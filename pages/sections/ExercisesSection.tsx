@@ -12,7 +12,7 @@ import {
     HStack
   } from '@chakra-ui/react';
   import Head from 'next/head'
-import CarouselExcercises from '../../components/CarouselExcercises';
+import CarouselExercises from '../../components/CarouselExcercises';
   
   export default function ExercisesSection() {
   
@@ -40,7 +40,7 @@ import CarouselExcercises from '../../components/CarouselExcercises';
                 width={{ base: '100%', md: '100%', lg: '100%' }}
                 className="diets"
             >
-              <CarouselExcercises />
+              <CarouselExercises />
             </Box>
           </Stack>
         </Container>

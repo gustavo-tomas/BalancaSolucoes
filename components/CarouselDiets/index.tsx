@@ -87,7 +87,6 @@ export default function CarouselDiets() {
   return (
     <Box 
         className='content'
-        align={"center"}
     >
       <Slider ref={setSliderRef} {...sliderSettings}>
         {ProjectCards.map((card, index) => (
@@ -95,11 +94,10 @@ export default function CarouselDiets() {
                 key={index} 
                 className='card'
                 padding={'15px'}
-                align={'center'}
             >
-                {/* <NextLink
-                    href={'/Diets'}
-                > */}
+                <NextLink
+                    href={"/sections/Diets"}
+                >
                     <Image 
                         src={card.imageSrc} 
                         className='card-image' 
@@ -107,7 +105,7 @@ export default function CarouselDiets() {
                         borderRadius={'100px'}
                         // cursor={'pointer'}
                     />
-                {/* </NextLink> */}
+                </NextLink>
                 {/* <Box className='text-info'>
                 <Box 
                     className='card-header'
