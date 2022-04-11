@@ -19,9 +19,10 @@ export const theme = extendTheme({
     {
       "bg": "#f5f5dc",
     },
-    grey:
+    gray:
     {
-      "tb": "#747474",
+      "500": "#504F4F",
+      "400": "#747474"
     },
   },
   fonts: {

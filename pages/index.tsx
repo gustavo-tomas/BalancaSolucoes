@@ -13,8 +13,8 @@ import Head from 'next/head';
 
 import Banner from './sections/Banner';
 import Beginning from './sections/Beginning';
-import Diets from './sections/Diets';
-import Exercises from './sections/Exercises';
+import DietsSection from './sections/DietsSection';
+import ExercisesSection from './sections/ExercisesSection';
 
 export default function Home() {
 
@@ -40,13 +40,13 @@ export default function Home() {
       <Box
         py={{ base: "2vh", md: "2vh" }}
       >
-        <Diets />
+        <DietsSection />
       </Box>
-      {/* <Box
+      <Box
         py={{ base: "2vh", md: "2vh" }}
       >
-        <Exercises />
-      </Box> */}
+        <ExercisesSection />
+      </Box>
     </>
   )
 }
