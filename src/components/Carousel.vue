@@ -1,60 +1,30 @@
-<!-- This is a single method -->
 <template>
-  <div>
-    <Carousel :scrollPerPage="false" buildSlideMarkup(10)>' </Carousel>
-  </div>
+  <mdb-carousel :interval="8000">
+    <mdb-carousel-item
+      img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).webp"
+      alt="First slide"
+    />
+    <mdb-carousel-item
+      img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).webp"
+      alt="Second slide"
+    />
+    <mdb-carousel-item
+      img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).webp"
+      alt="Third slide"
+    />
+  </mdb-carousel>
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
-// import VueCarousel from "vue-carousel";
-// import VueCarousel from "vue-carousel";
-
+import { mdbCarousel, mdbCarouselItem } from "mdbvue";
 export default {
-  function: function buildSlideMarkup(count) {
-    let slideMarkup;
-    for (let i = 1; i <= count; i++) {
-      slideMarkup += (
-        <Slide>
-          <span class="label">' + i + '</span>
-        </Slide>
-      );
-    }
-    return slideMarkup;
-  },
-
+  name: "CarouselPage",
   components: {
-    Carousel,
-    // Slide,
+    mdbCarousel,
+    mdbCarouselItem,
   },
 };
 </script>
-
-<style scoped>
-.VueCarousel-slide {
-  position: relative;
-  background: #42b983;
-  color: #fff;
-  font-family: Arial;
-  font-size: 24px;
-  text-align: center;
-  min-height: 100px;
-}
-
-.label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.carousel {
-  margin: auto;
-  /* This values are just placeholders */
-  width: 200px;
-  height: 200px;
-  /* This values are just placeholders */
-  background-color: #3d405d;
-  border-radius: 10px;
-  color: white;
-}
-</style>

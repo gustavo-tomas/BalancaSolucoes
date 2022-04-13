@@ -4,3 +4,9 @@
     <p>this is some text</p>
   </div>
 </template>
+
+<style scoped>
+* {
+  background-color: green;
+}
+</style>

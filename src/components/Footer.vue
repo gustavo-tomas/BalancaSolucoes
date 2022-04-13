@@ -14,6 +14,6 @@ export default {
 <style>
 #footer {
   background-color: var(--color-primary-dark);
-  color: white;
+  color: var(--color-primary-dark);
 }
 </style>

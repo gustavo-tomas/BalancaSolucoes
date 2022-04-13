@@ -2,7 +2,6 @@
   <div class="home">
     <h1>Balança Soluções</h1>
   </div>
-  <Methods />
   <Carousel />
 </template>
 

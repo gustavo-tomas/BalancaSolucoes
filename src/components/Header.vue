@@ -2,8 +2,8 @@
   <div id="nav">
     <span>Balança Soluções</span>
     <router-link to="/">Início</router-link>
-    <router-link to="/about">Planos</router-link>
-    <router-link to="/about">Contato</router-link>
+    <router-link to="/plans">Planos</router-link>
+    <router-link to="/contacts">Contato</router-link>
   </div>
 </template>
 
