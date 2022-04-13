@@ -25,9 +25,10 @@ export default {
   font-weight: bold;
   color: var(--color-primary-black);
   text-decoration: none;
-  &:hover {
-    color: var(--color-primary-light);
-  }
+}
+
+nav a:hover {
+  color: var(--color-primary-light);
 }
 
 #nav a.router-link-exact-active {

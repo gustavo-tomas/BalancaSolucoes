@@ -18,11 +18,13 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
 :root {
-  --color-dark-gray: #2c3e50;
-  --color-primary-light: #F7EDE2;
-  --color-dark-cyan: #84A59D;
+  --color-primary-light: #f7ede2;
   --color-primary-black: #000000;
+  --color-dark-cyan: #84a59d;
+  --color-dark-gray: #2c3e50;
 }
 
 * {
@@ -39,7 +41,7 @@ body {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Sora, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
