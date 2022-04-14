@@ -8,6 +8,8 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
+document.title = "BalancaSolucoes";
+
 export default {
   name: "App",
   components: {
@@ -21,10 +23,12 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 
 :root {
+  --color-primary-white: #ffffff;
   --color-primary-light: #f7ede2;
   --color-primary-black: #000000;
   --color-dark-cyan: #84a59d;
   --color-dark-gray: #2c3e50;
+  --color-light-red: #f28482;
 }
 
 * {

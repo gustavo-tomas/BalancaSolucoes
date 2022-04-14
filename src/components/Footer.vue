@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <h1>This is a healthy footer</h1>
+    <p>© 2022 Balanca Solucoes LTDA | Alguns direitos reservados</p>
   </footer>
 </template>
 

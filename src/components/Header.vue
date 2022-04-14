@@ -16,6 +16,7 @@ export default {
 
 <style scoped>
 #nav {
+  width: 100vw;
   padding: 30px;
   user-select: none;
   background-color: var(--color-dark-cyan);
