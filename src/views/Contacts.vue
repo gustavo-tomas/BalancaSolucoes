@@ -1,6 +1,6 @@
 <template>
   <div class="contacts">
-    <h1>Developers</h1>
+    <p class="title">Developers</p>
     <Contact
       contactName="André Larrosa"
       contactUrl="https://github.com/andrelarrosacrypt"
@@ -29,7 +29,16 @@ export default {
 </script>
 
 <style scoped>
-* {
-  background-color: green;
+.title {
+  font-size: 64px;
+  padding: 80px;
+}
+
+.contacts {
+  margin: auto;
+  background-image: url("../../public/assets/scale_1080.png");
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1080px;
 }
 </style>

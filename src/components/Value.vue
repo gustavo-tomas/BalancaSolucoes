@@ -23,6 +23,8 @@ export default {
 
 <style scoped>
 .value {
+  border: 1px solid;
+  border-radius: 75px;
   background-color: valueColor;
   margin: auto;
   width: 600px;

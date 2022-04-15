@@ -27,6 +27,7 @@ export default {
   --color-primary-light: #f7ede2;
   --color-primary-black: #000000;
   --color-dark-cyan: #84a59d;
+  --color-darker-cyan: #617a74;
   --color-dark-gray: #2c3e50;
   --color-light-red: #f28482;
 }

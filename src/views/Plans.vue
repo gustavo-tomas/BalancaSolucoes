@@ -1,81 +1,40 @@
 <template>
+  <p class="title">Planos de Dieta</p>
+  <Carousel :images="images" />
   <div class="plans">
-    <div class="wrapper">
-      <SplitCarousel v-bind="option">
-        <SplitCarouselItem v-for="desc in description" :key="desc">
-          <!--<div class="box">{{ item }}</div>-->
-          <div class="box">
-            <Plan :itemName="desc.title" :itemDescription="desc.text" />
-          </div>
-          <!--<Plan itemName="Dietas" :itemDescription="desc.text" />-->
-        </SplitCarouselItem>
-      </SplitCarousel>
-    </div>
+    <Plan itemName="Dietas" :itemDescription="muscle_diet" />
+    <Plan itemName="Exercício" :itemDescription="muscle_exercise" />
   </div>
 </template>
 
 <script>
 import Plan from "../components/Plan.vue";
+import Carousel from "../components/Carousel.vue";
+import img1 from "../../public/assets/abacaxi.png";
+import img2 from "../../public/assets/pizza 1.png";
+import img3 from "../../public/assets/vegana 3.png";
+import img4 from "../../public/assets/suco.png";
+import img5 from "../../public/assets/abacaxi.png";
 
-const defaultConfig = {
-  displayAmount: 4,
-  autoplay: true,
-  speed: 500,
-  interval: 3000,
-  loop: true,
-  height: 80,
-  itemWidth: 120,
-  pauseOnHover: true,
-  timingFunction: "ease",
-  arrowVisible: "default",
-};
+const images = [
+  { img: img1 },
+  { img: img2 },
+  { img: img3 },
+  { img: img4 },
+  { img: img5 },
+];
 
 export default {
   name: "Plans",
   components: {
     Plan,
+    Carousel,
   },
   data() {
     return {
-      data: {
-        diet: muscle_diet,
-        exercise: muscle_exercise,
-      },
-      description: [
-        { title: "Exercício", text: muscle_diet },
-        { title: "Dietas", text: muscle_exercise },
-      ],
-      option: { ...defaultConfig },
-      timingFuntionOptions: [
-        {
-          value: "ease",
-          label: "ease",
-        },
-        {
-          value: "ease-in",
-          label: "ease-in",
-        },
-        {
-          value: "ease-out",
-          label: "ease-out",
-        },
-        {
-          value: "ease-in-out",
-          label: "ease-in-out",
-        },
-        {
-          value: "linear",
-          label: "linear",
-        },
-        {
-          value: "steps(2, start)",
-          label: "steps(2, start)",
-        },
-        {
-          value: "cubic-bezier(0.06, 0.29, 0.19, 1.4)",
-          label: "cubic-bezier(0.06, 0.29, 0.19, 1.4)",
-        },
-      ],
+      muscle_exercise,
+      muscle_diet,
+      images,
     };
   },
 };
@@ -133,33 +92,33 @@ Repetir a série e passar pro alongamento
 Alongamento (30s)`;
 
 // https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
-const muscle_diet = `
-Café da manhã
-Dia 1: 2 fatias de pão integral com ovo e queijo + 1 xícara de café com leite
-Dia 2: 1 tapioca de frango e queijo + 1 copo de leite com cacau
-Dia 3: 1 copo de suco sem açúcar + 1 omelete com 2 ovos e frango
 
-Lanche da manhã
-Dia 1: Lanche da manhã
-Dia 2: 1 iogurte natural com mel e semente de chia
-Dia 3: 1 banana amassada com aveia e 1 colheres de pasta de amendoim
+// async function getJSON(path) {
+//   const response = await fetch(path);
+//   const json = await response.json();
+//   return json;
+// }
 
-Almoço/Jantar
-Dia 1: 4 colheres de sopa de arroz + 3 colheres de feijão + 150 g de patinho grelhado + salada crua de repolho, cenoura e pimentão
-Dia 2: 1 posta de salmão + batata doce cozida + salada refogada com azeite
-Dia 3: Macarronada de carne moída com macarrão integral e molho de tomate + 1 copo de suco
+const muscle_diet = fetch("../../public/assets/json/diets.json").then(
+  (response) => {
+    return response.json();
+  }
+);
 
-Lanche da tarde
-Dia 1: 1 iogurte + 1 sanduíche integral de frango com requeijão 
-Dia 2: vitamina de fruta com 1 colher de pasta de amendoim + 2 colheres de aveia
-Dia 3: 1 xícara de café com leite + 1 crepioca recheada com 1/3 lata de atum`;
+console.log(muscle_diet);
 </script>
 
 <style>
+.title {
+  font-size: 64px;
+  margin: 30px 0px;
+}
+
 .wrapper {
   width: 800px;
   margin: 0 auto;
 }
+
 .box {
   border: 1px solid #eee;
   height: 100%;
@@ -168,12 +127,15 @@ Dia 3: 1 xícara de café com leite + 1 crepioca recheada com 1/3 lata de atum`;
   justify-content: center;
   align-items: center;
 }
+
 .operator {
   padding: 30px 0;
 }
+
 .code {
   margin: 0;
 }
+
 details {
   padding: 25px 0 0 10px;
 }
