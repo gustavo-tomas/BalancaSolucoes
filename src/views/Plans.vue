@@ -10,11 +10,15 @@
 <script>
 import Plan from "../components/Plan.vue";
 import Carousel from "../components/Carousel.vue";
-import img1 from "../../public/assets/abacaxi.png";
-import img2 from "../../public/assets/pizza 1.png";
-import img3 from "../../public/assets/vegana 3.png";
-import img4 from "../../public/assets/suco.png";
-import img5 from "../../public/assets/abacaxi.png";
+
+import img1 from "../../public/assets/images/abacaxi.png";
+import img2 from "../../public/assets/images/pizza 1.png";
+import img3 from "../../public/assets/images/vegana 3.png";
+import img4 from "../../public/assets/images/suco.png";
+import img5 from "../../public/assets/images/abacaxi.png";
+
+import diets from "../../public/assets/json/diets.json";
+import exercises from "../../public/assets/json/exercises.json";
 
 const images = [
   { img: img1 },
@@ -40,72 +44,10 @@ export default {
 };
 
 // https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/
-const muscle_exercise = `
-Os exercícios desse plano devem ser feitos pelo menos duas vezes por semana.
-Além disso, cada exercício deve ser realizado 2 vezes por cerca de 30 segundos
-e o descanso deve ser de 15 segundos. Entre cada grupo de exercícios, o tempo de descanso
-também deve ser de 15 segundos, com exceção dos exercícios para tríceps, em que o intervalo
-de descanso deve ser de 30 segundos.
-
-Aquecimento (30s - 60s): pular corda, polichinelo
-
-Peitoral e braços
-1. Flexão tradicional (30s)
-2. Flexão estática (30s)
-Repetir a série e passar pro próximo grupo
-
-Glúteos
-1. Agachamento tradicional (30s)
-2. Agachamento estático (30s)
-Repetir a série e passar pro próximo grupo
-
-Perna
-1. Lunges alternados (30s)
-2. Lunges estáticos (30s)
-Repetir a série e alternar a perna para o lunge estático
-
-Tríceps
-1. Tríceps com cadeira (30s)
-2. Tríceps estático (30s)
-Repetir a série e dar uma pausa de 30s antes de passar para o próximo
-
-Panturrilha
-1. Elevação da panturrilha (30s)
-2. Panturrilha estática (30s)
-Repetir a série e passar para o próximo grupo
-
-Abdominal
-1. Abdominal tocando o pé (30s)
-2. Abdominal estático (30s)
-Repetir a série e passar para o próximo grupo
-
-Abdominal lateral
-1. Prancha lateral (30s)
-2. Prancha lateral estática (30s)
-Repetir a série e alternar o lado para a prancha
-
-Costas
-1. Posição super homem (30s)
-2. Posição super homem estático (30s)
-Repetir a série e passar pro alongamento
-
-Alongamento (30s)`;
+const muscle_exercise = exercises.muscle;
 
 // https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
-
-// async function getJSON(path) {
-//   const response = await fetch(path);
-//   const json = await response.json();
-//   return json;
-// }
-
-const muscle_diet = fetch("../../public/assets/json/diets.json").then(
-  (response) => {
-    return response.json();
-  }
-);
-
-console.log(muscle_diet);
+const muscle_diet = diets.muscle;
 </script>
 
 <style>

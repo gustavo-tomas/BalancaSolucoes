@@ -2,7 +2,23 @@
   <div class="home">
     <p class="subtitle">Soluções leves para Pessoas pesadas</p>
   </div>
-  <Value valueName="nome" valueDescription="desc" valueColor="#d0d0d0" />
+  <div class="values">
+    <Value
+      valueName="Valores"
+      valueDescription="Acreditamos que  um estilo de vida saudável deve ser acessível a todas as pessoas"
+      valueColor="#B7E4C7"
+    />
+    <Value
+      valueName="Exercícios"
+      valueDescription="Exercícios físicos para todas as pessoas de todos os níveis"
+      valueColor="#F28482"
+    />
+    <Value
+      valueName="Dietas"
+      valueDescription="Receitas saborosas e pouco calóricas"
+      valueColor="#F6BD60"
+    />
+  </div>
 </template>
 
 <script>
@@ -19,7 +35,7 @@ export default {
 <style scoped>
 .home {
   height: 710px;
-  background-image: url("../../public/assets/banner.png");
+  background-image: url("../../public/assets/images/banner.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -30,5 +46,12 @@ export default {
   margin: auto;
   padding-top: 150px;
   height: 100%;
+}
+
+.values {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  width: auto;
 }
 </style>
