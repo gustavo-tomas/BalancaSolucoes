@@ -18,7 +18,6 @@ export default {
 
 <style scoped>
 .plan {
-  background-color: var(--color-light-red);
   border-radius: 25px;
   color: black;
   width: 700px;

@@ -1,10 +1,10 @@
 <template>
-  <div class="value">
+  <div class="value" :style="{ backgroundColor: valueColor }">
     <div class="value-name">
       <h3>{{ valueName }}</h3>
     </div>
     <hr />
-    <div>
+    <div class="value-description">
       <p>{{ valueDescription }}</p>
     </div>
   </div>
@@ -23,11 +23,26 @@ export default {
 
 <style scoped>
 .value {
-  border: 1px solid;
   border-radius: 75px;
-  background-color: valueColor;
-  margin: auto;
-  width: 600px;
-  height: 700px;
+  margin: 30px;
+  padding: 90px 40px;
+  width: 300px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.value-name {
+  font-size: 32px;
+}
+
+.value-description {
+  line-height: 1.5cm;
+  font-size: 24px;
+}
+
+hr {
+  border: 1px dashed rgba(0, 0, 0, 0.493);
+  width: 250px;
+  margin: 30px auto 30px auto;
 }
 </style>
