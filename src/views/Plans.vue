@@ -11,22 +11,18 @@
 import Plan from "../components/Plan.vue";
 import Carousel from "../components/Carousel.vue";
 
-import img1 from "../../public/assets/images/abacaxi.png";
-import img2 from "../../public/assets/images/pizza 1.png";
-import img3 from "../../public/assets/images/vegana 3.png";
-import img4 from "../../public/assets/images/suco.png";
-import img5 from "../../public/assets/images/abacaxi.png";
-
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-const images = [
-  { img: img1 },
-  { img: img2 },
-  { img: img3 },
-  { img: img4 },
-  { img: img5 },
-];
+// list with all images of carousel
+const images_array = require("../../public/assets/images/images.json");
+
+var images = [];
+images_array.forEach((image) => {
+  images.push({ img: require(`../../public/assets/images/${image}`) });
+});
+
+console.log(images);
 
 export default {
   name: "Plans",
