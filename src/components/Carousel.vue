@@ -1,56 +1,101 @@
 <template>
-  <div class="wrapper">
-    <SplitCarousel v-bind="option">
-      <SplitCarouselItem v-for="item in itemAmount" :key="item">
-        <a class="box" href="https://github.com/gustavo-tomas">
-          <img class="box" :src="item.img" />
-        </a>
-      </SplitCarouselItem>
-    </SplitCarousel>
+  <div>
+    <div class="card-carousel">
+      <ArrowButton
+        arrowType="left"
+        @click="showPrevElement"
+        :disabled="this.reachedMaxLeft"
+      />
+      <Card
+        class="current-element"
+        :headline="currentElement.headline"
+        :text="currentElement.text"
+        :imgName="currentElement.imgName"
+      />
+      <ArrowButton
+        arrowType="right"
+        @click="showNextElement"
+        :disabled="this.reachedMaxRight"
+      />
+    </div>
+    <Indicators
+      :elements="this.cards"
+      :currentElementIndex="this.currentElementIndex"
+      :showElement="this.showElement"
+    />
   </div>
 </template>
-
 <script>
-const defaultConfig = {
-  displayAmount: 1,
-  autoplay: true,
-  speed: 5000,
-  interval: 3000,
-  loop: true,
-  height: 318,
-  itemWidth: 658,
-  pauseOnHover: true,
-  timingFunction: "ease",
-  arrowVisible: "default",
-};
+import Card from "./Card.vue";
+import ArrowButton from "./ArrowButton.vue";
+import Indicators from "./Indicators.vue";
 
 export default {
-  name: "App",
-  props: {
-    images: Array,
-  },
+  name: "Carousel",
+  props: { cards: Array },
+  components: { Card, ArrowButton, Indicators },
   data() {
     return {
-      itemAmount: this.images,
-      option: { ...defaultConfig },
+      currentElementIndex: 0,
     };
+  },
+  computed: {
+    currentElement() {
+      return this.cards[this.currentElementIndex];
+    },
+    reachedMaxLeft() {
+      return this.currentElementIndex === 0;
+    },
+    reachedMaxRight() {
+      return this.currentElementIndex === this.cards.length - 1;
+    },
+  },
+  methods: {
+    showNextElement() {
+      this.currentElementIndex++;
+    },
+    showPrevElement() {
+      this.currentElementIndex--;
+    },
+    showElement(elementIndex) {
+      this.currentElementIndex = elementIndex;
+    },
   },
 };
 </script>
 
-<style>
-.wrapper {
-  width: 800px;
-  margin: 0 auto;
+<style scoped>
+.card-carousel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.box {
-  border-radius: 30px;
-  border: 1px solid #eee;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn {
+  height: 90px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .btn {
+    display: none;
+  }
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn:disabled {
+  opacity: 0.2;
+  cursor: default;
 }
 </style>
