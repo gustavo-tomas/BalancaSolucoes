@@ -1,49 +1,51 @@
 <template>
-  <p class="title">Planos de Dieta</p>
-  <Carousel :images="images" />
-  <div class="plans">
-    <Plan itemName="Dietas" :itemDescription="muscle_diet" />
-    <Plan itemName="Exercício" :itemDescription="muscle_exercise" />
-  </div>
+  <p class="title">Nosso Planos</p>
+  <Carousel :cards="cards" />
+  <Diet :text="muscle_diet" />
 </template>
 
 <script>
-import Plan from "../components/Plan.vue";
 import Carousel from "../components/Carousel.vue";
+import Diet from "../components/Diet.vue";
 
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-// list with all images of carousel
-const images_array = require("../../public/assets/images/images.json");
+// https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
+const muscle_exercise = exercises.muscle;
 
-var images = [];
-images_array.forEach((image) => {
-  images.push({ img: require(`../../public/assets/images/${image}`) });
-});
+// https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/
+const muscle_diet = diets.muscle;
 
-console.log(images);
+for (let item in muscle_diet) {
+  console.log(item);
+}
 
 export default {
   name: "Plans",
   components: {
-    Plan,
+    Diet,
     Carousel,
   },
   data() {
     return {
       muscle_exercise,
       muscle_diet,
-      images,
+      cards: [
+        {
+          headline: "Exercícios para ganhar massa muscular",
+          text: muscle_exercise,
+          imgName: "exercicio-flexao.png",
+        },
+        {
+          headline: "Dieta para ganhar massa muscular",
+          text: muscle_diet,
+          imgName: "abacaxi.png",
+        },
+      ],
     };
   },
 };
-
-// https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/
-const muscle_exercise = exercises.muscle;
-
-// https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
-const muscle_diet = diets.muscle;
 </script>
 
 <style>
