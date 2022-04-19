@@ -21,7 +21,11 @@
       contactUrl="https://github.com/rafaelnogalha"
       contactPic="https://github.com/rafaelnogalha.png?size=100"
     />
-    <Contact contactName="Gabriel Farago" contactUrl="" />
+    <Contact
+      contactName="Gabriel Farago"
+      contactUrl="https://github.com/gabrielchan98"
+      contactPic="https://github.com/gabrielchan98.png?size=100"
+    />
   </div>
 </template>
 
