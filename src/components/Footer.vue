@@ -15,5 +15,6 @@ export default {
 #footer {
   background-color: var(--color-primary-dark);
   color: var(--color-primary-dark);
+  margin: 40px auto;
 }
 </style>
