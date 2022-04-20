@@ -12,12 +12,15 @@
     </figure>
     <div class="card-content">
       <h3 class="headline">{{ headline }}</h3>
-      <textarea class="text" :value="text" disabled></textarea>
+      <!-- <textarea class="text" :value="markdownToHtml" disabled></textarea> -->
+      <div v-html="markdownToHtml" class="text"></div>
     </div>
   </div>
 </template>
 
 <script>
+import { marked } from "marked";
+
 export default {
   name: "Card",
   props: {
@@ -26,6 +29,11 @@ export default {
     imgUrl: String,
     text: String,
     caption: String,
+  },
+  computed: {
+    markdownToHtml() {
+      return marked(this.text);
+    },
   },
 };
 </script>
@@ -41,7 +49,7 @@ a {
   border-radius: 10px;
   box-shadow: 0 10px 50px 0 rgba(41, 67, 100, 0.21);
   width: 700px;
-  height: 780px;
+  height: 800px;
   padding: 10px;
 }
 
@@ -70,8 +78,7 @@ a {
 
 .text {
   text-align: start;
-  width: 600px;
-  height: 320px;
+  height: 350px;
   padding: 30px;
   resize: none;
   background-color: rgba(185, 185, 185, 0.233);
@@ -80,7 +87,7 @@ a {
   font-family: inherit;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.856);
-  overflow-wrap: break-word;
+  overflow: scroll;
 }
 
 ::-webkit-scrollbar {
