@@ -1,30 +1,20 @@
 <template>
   <p class="title">Nosso Planos</p>
   <Carousel :cards="cards" />
-  <Diet :text="muscle_diet" />
 </template>
 
 <script>
 import Carousel from "../components/Carousel.vue";
-import Diet from "../components/Diet.vue";
 
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-// https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
 const muscle_exercise = exercises.muscle;
-
-// https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/
 const muscle_diet = diets.muscle;
-
-for (let item in muscle_diet) {
-  console.log(item);
-}
 
 export default {
   name: "Plans",
   components: {
-    Diet,
     Carousel,
   },
   data() {
@@ -35,12 +25,19 @@ export default {
         {
           headline: "Exercícios para ganhar massa muscular",
           text: muscle_exercise,
+          caption: "John Doe, medalhista olímpico em flexões",
           imgName: "exercicio-flexao.png",
+          imgUrl:
+            "https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/",
         },
         {
           headline: "Dieta para ganhar massa muscular",
           text: muscle_diet,
+          caption: `No topo (direita para esquerda), Manga e Abacaxi. Embaixo, Mamão e Banana.
+                    Foto tirada momentos antes do acidente.`,
           imgName: "abacaxi.png",
+          imgUrl:
+            "https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/",
         },
       ],
     };
