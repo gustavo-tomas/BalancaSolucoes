@@ -8,20 +8,23 @@
       <Plan
         title="Plano Mensal"
         price="R$ 9,90"
-        :desc="descMonth"
-        imgName="abacaxi.png"
+        :desc="desc[0]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
       />
       <Plan
         title="Plano Semestral"
         price="R$ 49,90"
-        :desc="descSems"
-        imgName="suco.png"
+        :desc="desc[1]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
       />
       <Plan
         title="Plano Mensal"
         price="R$ 99,90"
-        :desc="descAnual"
-        imgName="abacaxi.png"
+        :desc="desc[2]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
       />
     </div>
   </div>
@@ -34,9 +37,11 @@ import Plan from "../components/Plan.vue";
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-let descMonth = "Cancele a qualquer momento";
-let descSems = "15% de desconto";
-let descAnual = "Melhor preço";
+let desc = [
+  "Cancele a qualquer momento",
+  "15% de desconto",
+  "Maior custo benefício",
+];
 
 export default {
   name: "Plans",
@@ -46,9 +51,7 @@ export default {
   },
   data() {
     return {
-      descMonth,
-      descSems,
-      descAnual,
+      desc,
       cards: [
         {
           headline: "Exercícios para ganhar massa muscular",
