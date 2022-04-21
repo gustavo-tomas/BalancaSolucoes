@@ -1,10 +1,27 @@
 <template>
   <div class="testimony">
-    <p>{{ testName }}</p>
     <img
       :src="require(`../../public/assets/images/${testImg}`)"
       class="testimony-image"
     />
+    <div class="name-text">
+      <p class="name">{{ testName }}</p>
+      <p class="role">{{ testRole }}</p>
+      <!-- Fill checked starts -->
+      <span
+        class="fa fa-star star-checked"
+        v-for="index in testRating"
+        :key="index"
+      />
+      <!-- Fill unchecked starts -->
+      <span
+        class="fa fa-star star-unchecked"
+        v-for="index in 5 - testRating"
+        :key="index"
+      />
+      <p class="text">{{ testText }}</p>
+      <p class="disclamer">{{ testDiscl }}</p>
+    </div>
   </div>
 </template>
 
@@ -13,26 +30,64 @@ export default {
   name: "Testimony",
   props: {
     testName: String,
+    testRole: String,
+    testRating: Number,
     testImg: String,
+    testText: String,
+    testDiscl: String,
   },
 };
 </script>
 
-<style>
+<style scoped>
 .testimony {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  margin: auto;
-  width: 300px;
-  height: 150px;
-  background-color: red;
+  width: 400px;
+  height: 250px;
+}
+
+.name-text {
+  text-align: left;
+  margin: 20px;
 }
 
 .testimony-image {
-  width: 100px;
-  height: 100px;
+  height: 100%;
   border-radius: 15px;
+  background-color: #f28482;
+}
+
+.name {
+  font-size: 28px;
+}
+
+.role {
+  /* To align role to name a little better */
+  margin-left: 2px;
+}
+
+.text {
+  text-align: left;
+}
+
+.fa-star {
+  margin: 10px 2px;
+}
+
+.star-checked {
+  color: orange;
+}
+
+.star-unchecked {
+  color: rgb(51, 51, 51);
+}
+
+.disclamer {
+  font-size: 12px;
+  align-self: flex-start;
+  color: gray;
+  margin-top: 5px;
 }
 </style>
