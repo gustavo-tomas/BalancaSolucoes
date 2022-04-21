@@ -31,6 +31,7 @@ export default {
   background-repeat: no-repeat;
   border-radius: 10px;
   opacity: 0.6;
+  z-index: 10;
   margin: 10px;
   border: 1px solid var(--color-darker-cyan);
   transition: all 0.5s;
