@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="contacts">
-      <p class="title">Developers</p>
+      <p class="title">Desenvolvedores</p>
       <Contact
         contactName="André Larrosa"
         contactUrl="https://github.com/andrelarrosacrypt"
