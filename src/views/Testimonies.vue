@@ -80,7 +80,7 @@ export default {
 
 .title {
   font-size: 64px;
-  margin: 30px 0px;
+  margin: 30px 0px 60px 0px;
 }
 
 .testimonies {
@@ -108,7 +108,6 @@ export default {
   text-align: left;
   overflow: auto;
   word-break: break-all;
-  height: 100px;
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
