@@ -1,30 +1,58 @@
 <template>
-  <p class="title">Nosso Planos</p>
-  <Carousel :cards="cards" />
+  <p class="title">Nossos Planos</p>
+  <div class="wrapper">
+    <p class="preview">Preview dos planos ofertados</p>
+    <Carousel :cards="cards" />
+    <h2 class="pricing">Preços</h2>
+    <div class="plans">
+      <Plan
+        title="Plano Mensal"
+        price="R$ 9,90"
+        :desc="descMonth"
+        imgName="abacaxi.png"
+      />
+      <Plan
+        title="Plano Semestral"
+        price="R$ 49,90"
+        :desc="descSems"
+        imgName="suco.png"
+      />
+      <Plan
+        title="Plano Mensal"
+        price="R$ 99,90"
+        :desc="descAnual"
+        imgName="abacaxi.png"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
 import Carousel from "../components/Carousel.vue";
+import Plan from "../components/Plan.vue";
 
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-const muscle_exercise = exercises.muscle;
-const muscle_diet = diets.muscle;
+let descMonth = "Cancele a qualquer momento";
+let descSems = "15% de desconto";
+let descAnual = "Melhor preço";
 
 export default {
   name: "Plans",
   components: {
     Carousel,
+    Plan,
   },
   data() {
     return {
-      muscle_exercise,
-      muscle_diet,
+      descMonth,
+      descSems,
+      descAnual,
       cards: [
         {
           headline: "Exercícios para ganhar massa muscular",
-          text: muscle_exercise,
+          text: exercises.muscle,
           caption: "John Doe, medalhista olímpico em flexões",
           imgName: "exercicio-flexao.png",
           imgUrl:
@@ -32,12 +60,19 @@ export default {
         },
         {
           headline: "Dieta para ganhar massa muscular",
-          text: muscle_diet,
+          text: diets.muscle,
           caption: `No topo (direita para esquerda), Manga e Abacaxi. Embaixo, Mamão e Banana.
                     Foto tirada momentos antes do acidente.`,
           imgName: "abacaxi.png",
           imgUrl:
             "https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/",
+        },
+        {
+          headline: "Dieta para emagrecer",
+          text: diets.thin,
+          caption: `Nem tem milho nessa dieta.`,
+          imgName: "vegana3.png",
+          imgUrl: "https://www.tuasaude.com/dieta-para-emagrecer/",
         },
       ],
     };
@@ -45,35 +80,34 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: fit-content;
+}
+
 .title {
   font-size: 64px;
   margin: 30px 0px;
 }
 
-.wrapper {
-  width: 800px;
-  margin: 0 auto;
+.preview {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
 }
 
-.box {
-  border: 1px solid #eee;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
+.pricing {
+  margin: 20px auto;
+}
+
+.plans {
+  display: inline-grid;
   justify-content: center;
-  align-items: center;
-}
-
-.operator {
-  padding: 30px 0;
-}
-
-.code {
-  margin: 0;
-}
-
-details {
-  padding: 25px 0 0 10px;
+  align-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
 }
 </style>

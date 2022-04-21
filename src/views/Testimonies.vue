@@ -74,7 +74,7 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 900px;
   margin: auto;
 }
 
@@ -94,7 +94,7 @@ export default {
   align-self: flex-start;
   margin-top: 50px;
   height: 400px;
-  width: 800px;
+  width: 100%;
 }
 
 .comment-title {

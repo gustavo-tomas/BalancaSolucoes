@@ -11,7 +11,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #footer {
   background-color: var(--color-primary-dark);
   color: var(--color-primary-dark);

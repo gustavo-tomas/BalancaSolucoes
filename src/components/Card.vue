@@ -12,7 +12,6 @@
     </figure>
     <div class="card-content">
       <h3 class="headline">{{ headline }}</h3>
-      <!-- <textarea class="text" :value="markdownToHtml" disabled></textarea> -->
       <div v-html="markdownToHtml" class="text"></div>
     </div>
   </div>
@@ -49,8 +48,8 @@ a {
   border-radius: 10px;
   box-shadow: 0 10px 50px 0 rgba(41, 67, 100, 0.21);
   width: 700px;
-  height: 800px;
-  padding: 10px;
+  height: fit-content;
+  padding: 20px;
 }
 
 .headline {

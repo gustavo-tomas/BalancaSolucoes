@@ -60,6 +60,7 @@ export default {
 .title {
   font-size: 64px;
   padding-bottom: 40px;
+  margin-top: 30px;
 }
 
 .contacts {

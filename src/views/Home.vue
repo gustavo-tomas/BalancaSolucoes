@@ -33,25 +33,79 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  height: 710px;
-  background-image: url("../../public/assets/images/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
+/*mobile: 450,
+tablet: 900,
+desktop: 1250,*/
+
+@media only screen and (min-width: 300px) and (max-width: 849px) {
+  .home {
+    background-image: url("../../public/assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    height: 250px;
+  }
+  .subtitle {
+    width: 250px;
+    font-size: 25px;
+    margin: auto;
+    padding-top: 90px;
+    height: 100%;
+  }
+  .values {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: auto;
+  }
 }
 
-.subtitle {
-  width: 500px;
-  font-size: 80px;
-  margin: auto;
-  padding-top: 150px;
-  height: 100%;
+@media only screen and (min-width: 850px) and (max-width: 1199px) {
+  .home {
+    height: 800px;
+    background-image: url("../../public/assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .subtitle {
+    width: 400px;
+    font-size: 80px;
+    margin: auto;
+    padding-top: 150px;
+    height: 100%;
+  }
+  .values {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: auto;
+  }
 }
 
-.values {
-  display: flex;
-  justify-content: center;
-  margin: 50px auto;
-  width: auto;
+@media only screen and (min-width: 1200px) {
+  .home {
+    height: 710px;
+    background-image: url("../../public/assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .subtitle {
+    width: 500px;
+    font-size: 80px;
+    margin: auto;
+    padding-top: 150px;
+    height: 100%;
+  }
+  .values {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: auto;
+  }
 }
 </style>
