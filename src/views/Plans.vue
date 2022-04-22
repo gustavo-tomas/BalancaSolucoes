@@ -7,21 +7,21 @@
     <div class="plans">
       <Plan
         title="Plano Mensal"
-        price="R$ 9,90"
+        price="R$ 0,00"
         :desc="desc[0]"
         planUrl="https://cic.unb.br"
         imgName="fruit.jpeg"
       />
       <Plan
         title="Plano Semestral"
-        price="R$ 49,90"
+        price="R$ 00,00"
         :desc="desc[1]"
         planUrl="https://cic.unb.br"
         imgName="fruit.jpeg"
       />
       <Plan
         title="Plano Mensal"
-        price="R$ 99,90"
+        price="R$ 000,00"
         :desc="desc[2]"
         planUrl="https://cic.unb.br"
         imgName="fruit.jpeg"
@@ -64,7 +64,7 @@ export default {
         {
           headline: "Dieta para ganhar massa muscular",
           text: diets.muscle,
-          caption: `No topo (direita para esquerda), Manga e Abacaxi. Embaixo, Mamão e Banana.
+          caption: `No topo (direita para esquerda), Maçã e Abacaxi. Embaixo, Mamão e Banana.
                     Foto tirada momentos antes do acidente.`,
           imgName: "abacaxi.png",
           imgUrl:
@@ -111,6 +111,6 @@ export default {
   justify-content: center;
   align-self: center;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
 }
 </style>

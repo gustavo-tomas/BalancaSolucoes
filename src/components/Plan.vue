@@ -29,14 +29,13 @@ export default {
 
 <style scoped>
 .plan {
-  width: fit-content;
   background-color: var(--color-dark-cyan);
   background-position: center;
   background-size: cover;
   opacity: 0.5;
   border-radius: 15px;
   height: 300px;
-  width: 270px;
+  width: 320px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;

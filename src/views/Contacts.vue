@@ -8,6 +8,11 @@
         contactPic="https://github.com/andrelarrosacrypt.png?size=100"
       />
       <Contact
+        contactName="Gabriel Farago"
+        contactUrl="https://github.com/gabrielchan98"
+        contactPic="https://github.com/gabrielchan98.png?size=100"
+      />
+      <Contact
         contactName="Gustavo Tomás"
         contactUrl="https://github.com/gustavo-tomas"
         contactPic="https://github.com/gustavo-tomas.png?size=100"
@@ -21,11 +26,6 @@
         contactName="Rafael Nogalha"
         contactUrl="https://github.com/rafaelnogalha"
         contactPic="https://github.com/rafaelnogalha.png?size=100"
-      />
-      <Contact
-        contactName="Gabriel Farago"
-        contactUrl="https://github.com/gabrielchan98"
-        contactPic="https://github.com/gabrielchan98.png?size=100"
       />
     </div>
     <div class="icon-container">
