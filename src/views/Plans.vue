@@ -1,80 +1,116 @@
 <template>
-  <p class="title">Planos de Dieta</p>
-  <Carousel :images="images" />
-  <div class="plans">
-    <Plan itemName="Dietas" :itemDescription="muscle_diet" />
-    <Plan itemName="Exercício" :itemDescription="muscle_exercise" />
+  <p class="title">Nossos Planos</p>
+  <div class="wrapper">
+    <p class="preview">Preview dos planos ofertados</p>
+    <Carousel :cards="cards" />
+    <h2 class="pricing">Preços</h2>
+    <div class="plans">
+      <Plan
+        title="Plano Mensal"
+        price="R$ 0,00"
+        :desc="desc[0]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
+      />
+      <Plan
+        title="Plano Semestral"
+        price="R$ 00,00"
+        :desc="desc[1]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
+      />
+      <Plan
+        title="Plano Mensal"
+        price="R$ 000,00"
+        :desc="desc[2]"
+        planUrl="https://cic.unb.br"
+        imgName="fruit.jpeg"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import Plan from "../components/Plan.vue";
 import Carousel from "../components/Carousel.vue";
+import Plan from "../components/Plan.vue";
 
 import diets from "../../public/assets/json/diets.json";
 import exercises from "../../public/assets/json/exercises.json";
 
-// list with all images of carousel
-const images_array = require("../../public/assets/images/images.json");
-
-var images = [];
-images_array.forEach((image) => {
-  images.push({ img: require(`../../public/assets/images/${image}`) });
-});
-
-console.log(images);
+let desc = [
+  "Cancele a qualquer momento",
+  "15% de desconto",
+  "Maior custo benefício",
+];
 
 export default {
   name: "Plans",
   components: {
-    Plan,
     Carousel,
+    Plan,
   },
   data() {
     return {
-      muscle_exercise,
-      muscle_diet,
-      images,
+      desc,
+      cards: [
+        {
+          headline: "Exercícios para ganhar massa muscular",
+          text: exercises.muscle,
+          caption: "John Doe, medalhista olímpico em flexões",
+          imgName: "exercicio-flexao.png",
+          imgUrl:
+            "https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/",
+        },
+        {
+          headline: "Dieta para ganhar massa muscular",
+          text: diets.muscle,
+          caption: `No topo (direita para esquerda), Maçã e Abacaxi. Embaixo, Mamão e Banana.
+                    Foto tirada momentos antes do acidente.`,
+          imgName: "abacaxi.png",
+          imgUrl:
+            "https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/",
+        },
+        {
+          headline: "Dieta para emagrecer",
+          text: diets.thin,
+          caption: `Nem tem milho nessa dieta.`,
+          imgName: "vegana3.png",
+          imgUrl: "https://www.tuasaude.com/dieta-para-emagrecer/",
+        },
+      ],
     };
   },
 };
-
-// https://www.tuasaude.com/dieta-para-aumentar-a-massa-muscular/
-const muscle_exercise = exercises.muscle;
-
-// https://www.tuasaude.com/treino-de-hipertrofia-para-ganhar-massa-muscular/
-const muscle_diet = diets.muscle;
 </script>
 
-<style>
+<style scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: fit-content;
+}
+
 .title {
   font-size: 64px;
   margin: 30px 0px;
 }
 
-.wrapper {
-  width: 800px;
-  margin: 0 auto;
+.preview {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
 }
 
-.box {
-  border: 1px solid #eee;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
+.pricing {
+  margin: 20px auto;
+}
+
+.plans {
+  display: inline-grid;
   justify-content: center;
-  align-items: center;
-}
-
-.operator {
-  padding: 30px 0;
-}
-
-.code {
-  margin: 0;
-}
-
-details {
-  padding: 25px 0 0 10px;
+  align-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 </style>

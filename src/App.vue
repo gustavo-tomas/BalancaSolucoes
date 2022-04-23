@@ -45,9 +45,15 @@ body {
 }
 
 #app {
+  padding-top: 90px;
   font-family: Sora, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow-x: hidden;
+}
+
+#app #nav {
+  top: 0;
 }
 </style>
