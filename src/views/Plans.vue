@@ -20,7 +20,7 @@
         imgName="fruit.jpeg"
       />
       <Plan
-        title="Plano Mensal"
+        title="Plano Anual"
         price="R$ 000,00"
         :desc="desc[2]"
         planUrl="https://cic.unb.br"
@@ -64,7 +64,7 @@ export default {
         {
           headline: "Dieta para ganhar massa muscular",
           text: diets.muscle,
-          caption: `No topo (direita para esquerda), Maçã e Abacaxi. Embaixo, Mamão e Banana.
+          caption: `No topo (esquerda para direita), Maçã e Abacaxi. Embaixo, Mamão e Banana.
                     Foto tirada momentos antes do acidente.`,
           imgName: "abacaxi.png",
           imgUrl:
